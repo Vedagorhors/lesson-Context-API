@@ -1,4 +1,10 @@
-export const UserContacts = ({ email, phone }) => {
+import { useContext } from 'react';
+import { AppContext } from '../../../../context';
+
+export const UserContacts = () => {
+	const { userData } = useContext(AppContext);
+	const { email, phone } = userData;
+
 	return (
 		<div>
 			<h3>Контакты:</h3>
